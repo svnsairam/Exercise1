@@ -8,7 +8,7 @@ import org.springframework.ui.ModelMap;
 public class HomeController {
     User user = new User("Hi, this is sairam Welcome to stackroute!!");
     @RequestMapping(value = "/")
-    public String greeting(ModelMap map) {
+    public String greeting(Model map) {
         map.addAttribute("greeting", user.getUser());
         return "index";
     }
